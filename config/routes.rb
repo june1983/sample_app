@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get "/" => "app#index"
-  get 'static_pages/home'
-  get 'static_pages/help'
-  get 'static_pages/about'
-  get 'static_pages/contact'
+  get "/register" => "app#register"
+  get "/event" => "app#event"
+  get "/confirm" => "app#confirm"
+  get "/result" => "app#result"
+  
+  post "/create" => "app#create"
+
 end

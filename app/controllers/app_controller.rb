@@ -6,6 +6,8 @@ class AppController < ApplicationController
   end
   
   def create
+    @number = params[:number]
+    redirect_to("/register")
   end
   
   def event

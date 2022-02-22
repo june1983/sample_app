@@ -6,7 +6,8 @@ class AppController < ApplicationController
   end
   
   def create
-    @number = params[:number]
+    session[:number] = params[:number]
+    puts session[:number]
     redirect_to("/register")
   end
   

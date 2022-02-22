@@ -2,13 +2,17 @@
 <h1 class="Ribeye">PARTY TIME</h1>
 <p>名前を入力してください</p>
 
-<!--<form action="/sample/App" method="post">-->
-<!--	<div class="form-group">-->
-<!--		<div class="input-group mb-3 col-6">-->
-<!--		  <input type="text" name="name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>-->
-<!--		</div>-->
-		
-<!--		<input type="submit" class="btn btn-outline-secondary" value="登録する">-->
-<!--	</div>-->
-<!--</form>-->
+<%= form_tag("/confirm") do %>
+	<div class="form-group">
+		<% 
+			num = session[:number].to_i
+			for i in 1..num
+		%>
+		<div class="input-group mb-3 col-6">
+		  <input type="text" name="name<%=i%>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+		</div>
+		<% end %>
+		<input type="submit" class="btn btn-outline-secondary" value="登録する">
+	</div>
+<% end %>
 </main>

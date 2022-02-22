@@ -1,0 +1,45 @@
+<style>
+
+.css1{
+	font-family: 'arial black';
+	font-size: 150px;
+	color: white;
+	/*background-color: green;*/
+}
+
+</style>
+
+<script>
+
+onload = function(){
+
+	//変数
+	var max = 0;
+	var count = 5;
+
+	//要素
+	var box = document.getElementById("box");
+	var msg = document.getElementById("msg");
+
+	var timerID = setInterval( function(){
+
+	if (count == max) {
+		clearInterval(timerID);
+		window.location.href = '/result'; // 通常の遷移
+		//box.classList.remove("css1");
+		//box.classList.add("css2");
+		//msg.innerHTML = '<a href="https://chiebukuro.yahoo.co.jp/" target="_self">「知恵袋」へジャンプ</a>';
+	} else {
+		msg.textContent = count;
+		count--;
+	}
+
+	}, 1000);
+
+}
+</script>
+<main>
+<div id="box" class="css1">
+  <div id="msg"><p>ARE YOU READY?</p></div>
+</div>
+</main>

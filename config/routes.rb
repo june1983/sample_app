@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get "/result" => "app#result"
   
   post "/create" => "app#create"
+  post "/member" => "app#member"
 
 end

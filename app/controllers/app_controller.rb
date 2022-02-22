@@ -2,13 +2,19 @@ class AppController < ApplicationController
   def index
   end
   
-  def register
-  end
-  
   def create
     session[:number] = params[:number]
     puts session[:number]
     redirect_to("/register")
+  end
+  
+  def register
+  end
+  
+  def member
+    session[:member] = params[:name]
+    puts session[:member][1]
+    redirect_to("/confirm")
   end
   
   def event

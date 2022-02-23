@@ -1,4 +1,21 @@
-<main class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded fade1" style="max-width:600px;">
-<h1 class="Ribeye">PARTY TIME</h1>
-
-</main>
+<div class="container inner flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded fade1" style="max-width:600px;">
+  <h1 class="Ribeye">PARTY TIME</h1>
+  <%
+    num = session[:number].to_i
+    session[:member].shuffle!
+    for i in 0..num-2
+  %>
+  <p style="font: bold"><%= i+1 %>組目</p>
+  <div class="row">
+  <p class="col"><span><%= session[:member][i] %></span>さんが、<span><%= session[:member][i+1] %></span>さんに渡します</p>
+  </div>
+  <br>
+  <% end %>
+  
+  <p style="font: bold"><%= num %>組目</p>
+  <div class="row">
+  <p class="col"><span><%= session[:member][num-1] %></span>さんが、<span><%= session[:member][0] %></span>さんに渡します</p>
+  </div>
+  <br>
+  <p><a href="/" class="btn btn-outline-secondary">TOPへ戻る</a></p>
+</div>

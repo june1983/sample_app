@@ -1,18 +1,19 @@
-<main class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:600px;">
-<h1 class="Ribeye">PARTY TIME</h1>
-<p>名前を入力してください</p>
-
-<%= form_tag("/member") do %>
-	<div class="form-group">
-		<% 
-			num = session[:number].to_i
-			for i in 1..num
-		%>
-		<div class="input-group mb-3 col-6">
-		  <input type="text" name="name[]" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+<div class="container inner flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:600px;">
+	<h1 class="Ribeye">PARTY TIME</h1>
+	<p>参加するメンバー名前を入力してください</p>
+	
+	<%= form_tag("/member") do %>
+		<div class="form-group">
+			<% 
+				num = session[:number].to_i
+				for i in 1..num
+			%>
+			<div class="input-group mb-3 col-6">
+			  <input type="text" name="name[]" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+			</div>
+			<% end %>
+			<input type="submit" class="btn btn-outline-secondary" value="登録する">
 		</div>
-		<% end %>
-		<input type="submit" class="btn btn-outline-secondary" value="登録する">
-	</div>
-<% end %>
-</main>
+		<p><a href="/" class="btn btn-outline-secondary">戻る</a></p>
+	<% end %>
+</div>

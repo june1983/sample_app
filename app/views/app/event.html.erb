@@ -1,21 +1,12 @@
-<style>
-
-.css1{
-	font-family: 'arial black';
-	font-size: 150px;
-	color: white;
-	/*background-color: green;*/
-}
-
-</style>
+<div id="box" class="css1 inner">
+	<div id="msg"><p>ARE YOU READY?</p></div>
+</div>
 
 <script>
-
-onload = function(){
-
+window.addEventListener('turbolinks:load', function() {
 	//変数
 	var max = 0;
-	var count = 5;
+	var count = 3;
 
 	//要素
 	var box = document.getElementById("box");
@@ -35,11 +26,6 @@ onload = function(){
 	}
 
 	}, 1000);
-
-}
+	
+})
 </script>
-<main>
-<div id="box" class="css1">
-  <div id="msg"><p>ARE YOU READY?</p></div>
-</div>
-</main>

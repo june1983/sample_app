@@ -20,7 +20,14 @@ body {
 	}
 }
 
-main {
+.outer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.inner{
   text-align: center;
 }
 
@@ -35,4 +42,20 @@ input {
 
 .col-6 {
 	margin: auto;
+}
+
+.css1 {
+	font-family: 'arial black';
+	font-size: 150px;
+	color: white;
+	tex-align: center;
+}
+
+.fade1 {
+  animation: fadeIn 5s 1 normal;
+}
+
+@keyframes fadeIn { /*animation-nameで設定した値を書く*/
+  0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+  100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
 }

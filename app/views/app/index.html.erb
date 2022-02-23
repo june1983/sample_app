@@ -1,12 +1,12 @@
-<main class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:600px;">
-<h1 class="Ribeye">PARTY TIME</h1>
-<p>人数を入力してください</p>
-<%= form_tag("/create") do %>
-	<div class="form-group">
-		<div class="col-6">
-		  <input type="number" name="number" min="0" max="100" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+<div class="container inner flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:600px;">
+	<h1 class="Ribeye">PARTY TIME</h1>
+	<p>プレゼントを交換する人数を入力してください</p>
+	<%= form_tag("/create") do %>
+		<div class="form-group">
+			<div class="col-6">
+			  <input type="number" name="number" min="0" max="100" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+			</div>
 		</div>
-	</div>
-	<input type="submit" class="btn btn-outline-secondary" value="入力して次へ">
-<% end %>
-</main>
+		<input type="submit" class="btn btn-outline-secondary" value="入力して次へ">
+	<% end %>
+</div>
